@@ -20,6 +20,7 @@ export default class ImageOverlay extends Component {
       containerStyle,
       contentPosition,
       height,
+      width,
       overlayAlpha,
       overlayColor,
       rounded,
@@ -46,6 +47,7 @@ export default class ImageOverlay extends Component {
           {
             borderRadius: rounded,
             height: height,
+            width: width,
             justifyContent: justifyContent
           },
           containerStyle
@@ -69,7 +71,6 @@ export default class ImageOverlay extends Component {
 
 const styles = StyleSheet.create({
   image: {
-    width: width,
     overflow: "hidden",
     alignItems: "center"
   },
@@ -85,6 +86,7 @@ ImageOverlay.propTypes = {
   rounded: PropTypes.number,
   source: Image.propTypes.source,
   height: PropTypes.number,
+  width: PropTypes.number,
   title: PropTypes.string,
   titleStyle: Text.propTypes.style,
   overlayColor: PropTypes.string,
@@ -97,6 +99,7 @@ ImageOverlay.propTypes = {
 
 ImageOverlay.defaultProps = {
   height: 300,
+  width,
   overlayColor: "#000000",
   overlayAlpha: 0.5,
   contentPosition: "center"
